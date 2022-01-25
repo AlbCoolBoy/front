@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像的添加</title>
+</head>
+<body>
+
+<img src="OIP-C.jpg" alt="小鲨鱼无法显示" title="sharkkkky" >
+<!--在代码中插入图像的位置对于图像显示的影响-->
+
+<h3>第一种，在段落之前放链接，段落会在图像之后另起一行显示</h3> <br> <br>
+<img src="OIP-C.jpg" alt="小鲨鱼无法显示" title="sharkkkky" >
+<P>A map illustrating the rise and expansion of the Neo-Assyrian Empire, an ancient civilization in Mesopotamia from the second millennium BCE that followed two distinct phases of Assyrian history, as successive Assyrian rulers were intentionally bent on expanding the state. They achieved tremendous territorial growth, eventually ruling over the Middle East from the Taurus Mountains in the North to the edge of the Arabian desert and the Persian Gulf in the South, from Egypt and the Levant in the West to the Zagros Mountains in the East. This enormous area was administrated from a single capital in the Assyrian heartland, which subsequently changed from Assur to Kalhu to Dur-Sharrukin and Nineveh. Due largely to their military skill, technological ingenuity, and advanced administration, the Neo-Assyrians established the largest (and some say first) empire the world had seen.</P>
+<br>
+<hr>
+<br>
+
+<h3>第二种，在段落的起始处放链接,段落文本的第一行将与图像的底部对其</h3>
+<p>
+    <img src="OIP-C.jpg" alt="小鲨鱼无法显示" title="sharkkkky" >
+    A map illustrating the rise and expansion of the Neo-Assyrian Empire, an ancient civilization in Mesopotamia from the second millennium BCE that followed two distinct phases of Assyrian history, as successive Assyrian rulers were intentionally bent on expanding the state. They achieved tremendous territorial growth, eventually ruling over the Middle East from the Taurus Mountains in the North to the edge of the Arabian desert and the Persian Gulf in the South, from Egypt and the Levant in the West to the Zagros Mountains in the East. This enormous area was administrated from a single capital in the Assyrian heartland, which subsequently changed from Assur to Kalhu to Dur-Sharrukin and Nineveh. Due largely to their military skill, technological ingenuity, and advanced administration, the Neo-Assyrians established the largest (and some say first) empire the world had seen.
+</p>
+<br>
+<hr>
+<br>
+
+<h3>第三种，在段落之中放链接，图像将位于他所在文本的文字之中</h3>
+<p>
+    A map illustrating the rise and expansion of the Neo-Assyrian Empire, an ancient civilization in Mesopotamia from the second millennium BCE that followed two distinct phases of Assyrian history, as successive Assyrian rulers were intentionally bent on expanding the state. They achieved tremendous territorial growth, eventually ruling over the Middle <img src="OIP-C.jpg" alt="小鲨鱼无法显示" title="sharkkkky" > East from the Taurus Mountains in the North to the edge of the Arabian desert and the Persian Gulf in the South, from Egypt and the Levant in the West to the Zagros Mountains in the East. This enormous area was administrated from a single capital in the Assyrian heartland, which subsequently changed from Assur to Kalhu to Dur-Sharrukin and Nineveh. Due largely to their military skill, technological ingenuity, and advanced administration, the Neo-Assyrians established the largest (and some say first) empire the world had seen.
+</p>
+</body>
+</html>
+
+
+
+<!--图像标签：img-->
+<!--相关特性
+src:图像文件存储路径
+alt:无法显示图像的时候对图像进行说明
+title:将光标悬停在图片上的时候显示的信息
+height:以像素为单位设置图像高度
+width:以像素为单位设置图像宽度-->
+
+<!--旧代码中还是支持使用align进行如图像的对其之类的调整的
+，在HTML5中，新建的网页应该使用CSS来进行图像位置和对其的调整-->
+
