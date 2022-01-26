@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签表单控件</title>
+</head>
+<body>
+<form action="" method="get">
+    <label for="">
+        Age: <input type="text" name="age">
+    </label>
+    <br>
+    Gender:
+    <input type="radio" id="female" name="gender" value="f">
+    <label for="female">Female</label>
+    <input type="radio" id="male" name="gender" value="m">
+    <label for="male">Male</label>
+</form>
+</body>
+</html>
+<!--label标签的作用
+1、将文本说明和表单输入框全部包围起来
+2、将表单控件分开，使用for特性来指明label元素所关联的表单控件
+for特性
+    1、for特性值用来声明控件标注的是哪个表单控件
+    2、for特性的值要和他所标注的表单控件的id相匹配，也就是说在使用label的时候，需要被标注的表单控件必须使用一个id特性值，才能被label进行标注
+    3、根据经验，在以下位置使用label效果比较好
+       上面或左边：
+            单行文本框
+            文本域
+            选择框
+            文件上传域
+     -->

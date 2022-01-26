@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传域</title>
+</head>
+<body>
+
+<form action="http://www.example.com/upload.php" method="post"> <!--上传文件必须使用post方法-->
+    <p>
+        Upload your file
+    </p>
+    <br>
+    <input type="file" name="user_file">
+    <br>
+    <input type="submit" name="upload">
+    <br>
+
+    <!--这里设计的submit类型的输入，就是一个提交按钮，其相关的特性值
+        1、name 可以使用name特性但是不是必须的
+        2、value 用于控制按钮上的文本信息-->
+
+</form>
+
+</body>
+</html>
