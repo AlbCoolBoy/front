@@ -5,6 +5,22 @@
     <title>表单验证</title>
 </head>
 <body>
+<form action="">
+    <label for="username">
+        UserName:
+    </label>
+    <input type="text" name="username" id="username" required="required">
+    <br>
+
+    <label for="password">
+        Password:
+    </label>
+    <input type="password" name="password" id="password" required="required">
+    <br>
+    <input type="submit" name="Submit" value="submit">
+</form>
 
 </body>
 </html>
+<!--表单在用户填写信息的时候，如果信息填写错误
+    之前表单验证的工作是交给JavaScript来做，但是在HTML5中已经引入了表单提示机制-->
