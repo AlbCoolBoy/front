@@ -1,0 +1,99 @@
+* {
+    MARGIN: 0px;
+    PADDING: 0px;
+
+}
+
+body {
+    /*弹性布局，让页面水平和垂直布局*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*设置背景渐变色*/
+    background-image: linear-gradient(200deg, #5ee7df, #b490ca);
+    perspective: 1000px;
+    /*perspective属性是用来增加动画的立体感的，这个值越小，立体感越强*/
+}
+
+.card {
+    /*相对定位*/
+    position: relative; /*元素先放置在未添加定位时的位置*/
+    width: 300px;
+    height: 450px;
+    /*设置边框为圆角*/
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #FFF;
+    /*盒子阴影*/
+    box-shadow: 1px 1px 20px rgba(0,0,0,1);
+    /*给父元素添加一个3D属性*/
+    transform-style: preserve-3d;
+    /*给卡片添加默认动画*/
+
+}
+/*设置将鼠标移入卡片的时候执行翻转动画*/
+.card:hover{
+    animation: rotate-reverse 1.2s cubic-bezier(0.66,-0.47,0.33,1.5) forwards;
+
+    /*关于这个动画的几个属性分别是
+     名称   时长    第三个属性是贝塞尔曲线（自定义动画的运动轨迹，让动画的轨迹
+    有更多的可能性。）  第四个属性是动画完成的时候回到什么状态，默认使用的是backwards状态
+    当给定的属性是forwards的时候，动画到了100%的时候就会停下来*/
+
+
+
+
+
+
+
+}
+.front,.back{
+    /*子元素使用绝对定位，父元素使用相对定位*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*弹性布局，让元素垂直陈列*/
+    display: flex;
+    flex-direction: column;
+    /*现在子元素垂直陈列，那就是让子元素水平居中*/
+    align-items: center;
+    /*平均分配高度给每一个子元素*/
+    justify-content: space-around;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+
+}
+.back   {
+    /*将卡片转到背面就需要进行一个沿着Y轴旋转180°，同时还要将
+    父盒子设置成3D的盒子*/
+    transform: rotateY(180deg);
+}
+/*定义旋转动画,使用keyframes在动画序列中添加关键帧*/
+/*从背面转到正面，直接定义两个关键帧，实现两个Y轴方向的关键帧动画就行*/
+@keyframes rotate{
+    0%{
+        transform:rotateY(0deg);
+    }
+    100%{
+        transform:rotateY(180deg);
+    }
+}
+
+@keyframes rotate-reverse {
+    0%{
+        transform:rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+
+
+
+
+
+
