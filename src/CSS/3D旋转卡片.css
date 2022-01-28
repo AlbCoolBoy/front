@@ -72,6 +72,8 @@ body {
     父盒子设置成3D的盒子*/
     transform: rotateY(180deg);
 }
+
+
 /*定义旋转动画,使用keyframes在动画序列中添加关键帧*/
 /*从背面转到正面，直接定义两个关键帧，实现两个Y轴方向的关键帧动画就行*/
 @keyframes rotate{

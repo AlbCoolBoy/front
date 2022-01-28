@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    /*渐变式背景*/
+    background:linear-gradient(200deg,#ddd6f3,#faaca8);
+}
+/*z这三个元素都需要进行弹性布局*/
+body,.navbar,.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+
+
+}
+.navbar{
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+.navbar input{
+    width: 40px;
+    height: 40px;
+    /*将复选框不透明度设置为0，直接就看不见了*/
+    opacity: 0;
+    cursor: pointer;
+}
+.navbar span{
+    position: absolute;
+    left: 25px;
+    width: 30px;
+    height: 4px;
+    top: calc(50% - 10px);  /*将两条线放在一起然后单独设置第二条线的位置，calc方法能够自动计算数值*/
+    border-radius: 15px;
+    background-color: #999;
+    pointer-events: none;
+}
+/*第二条线在navbar元素的第三个位置，所以这里写3*/
+.navbar span:nth-child(3){
+    top : calc(50% + 6px);
+}
+.navbar ul{
+    width:0;
+    overflow: hidden;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0px 15px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+.navbar ul li a:hover{
+    color: #fb7299;
+}
+/*当复选框被选中的时候，~是兄弟选择器，查找同一级的ul*/
+.navbar input:checked ~ ul{
+    width: 350px;
+}
+.navbar input:checked ~span:nth-child(2){
+    top: calc(50% - 2px);
+    transform: rotate(-45deg);
+    background-color: #fb7299;
+    transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
+}
+.navbar input:checked ~ span:nth-child(3){
+    top:calc(50% - 2px);
+    transform: rotate(45deg);
+    background-color: #fb7299;
+    transition: top 0.3s ease-in-out,transform 0.3s ease-in-out 0.3s;
+}
